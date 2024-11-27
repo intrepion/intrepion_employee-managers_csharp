@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sco.SarTool.BusinessLogic",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sco.SarTool.BusinessLogic.UnitTests", "Sco.SarTool.BusinessLogic.UnitTests\Sco.SarTool.BusinessLogic.UnitTests.csproj", "{BCBFDE90-9365-4A95-AA86-B18BD4EB19C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sco.SarTool.Client.ComponentTests", "Sco.SarTool.Client.ComponentTests\Sco.SarTool.Client.ComponentTests.csproj", "{EE879386-1945-49FA-9AA3-938BCCB5580C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +84,18 @@ Global
 		{BCBFDE90-9365-4A95-AA86-B18BD4EB19C7}.Release|x64.Build.0 = Release|Any CPU
 		{BCBFDE90-9365-4A95-AA86-B18BD4EB19C7}.Release|x86.ActiveCfg = Release|Any CPU
 		{BCBFDE90-9365-4A95-AA86-B18BD4EB19C7}.Release|x86.Build.0 = Release|Any CPU
+		{EE879386-1945-49FA-9AA3-938BCCB5580C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE879386-1945-49FA-9AA3-938BCCB5580C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE879386-1945-49FA-9AA3-938BCCB5580C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EE879386-1945-49FA-9AA3-938BCCB5580C}.Debug|x64.Build.0 = Debug|Any CPU
+		{EE879386-1945-49FA-9AA3-938BCCB5580C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EE879386-1945-49FA-9AA3-938BCCB5580C}.Debug|x86.Build.0 = Debug|Any CPU
+		{EE879386-1945-49FA-9AA3-938BCCB5580C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE879386-1945-49FA-9AA3-938BCCB5580C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE879386-1945-49FA-9AA3-938BCCB5580C}.Release|x64.ActiveCfg = Release|Any CPU
+		{EE879386-1945-49FA-9AA3-938BCCB5580C}.Release|x64.Build.0 = Release|Any CPU
+		{EE879386-1945-49FA-9AA3-938BCCB5580C}.Release|x86.ActiveCfg = Release|Any CPU
+		{EE879386-1945-49FA-9AA3-938BCCB5580C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
