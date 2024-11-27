@@ -4,6 +4,7 @@ using ApplicationNamePlaceholder.BusinessLogic.Grid;
 using ApplicationNamePlaceholder.BusinessLogic.Grid.Admin.ApplicationRoleGrid;
 using ApplicationNamePlaceholder.BusinessLogic.Grid.Admin.ApplicationUserGrid;
 
+using Sco.SarTool.BusinessLogic.Grid.Admin.EmployeeGrid;
 // GridNamespaceCodePlaceholder
 
 using ApplicationNamePlaceholder.Components;
