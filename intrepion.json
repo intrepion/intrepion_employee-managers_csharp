@@ -1,0 +1,228 @@
+{
+  "entities": [
+    {
+      "keys": [
+        {
+          "key": "NormalizedFirstName",
+          "ordering": 1
+        },
+        {
+          "key": "NormalizedLastName",
+          "ordering": 2
+        }
+      ],
+      "names": {
+        "entity": "Employee",
+        "human": "Employee",
+        "plural": "Employees",
+        "table": "Employees",
+        "url": "employee"
+      },
+      "properties": [
+        {
+          "foreign": {
+            "display": [
+              {
+                "ordering": 1,
+                "property": "UserName"
+              }
+            ],
+            "entity": "ApplicationUser",
+            "keys": [
+              {
+                "key": "NormalizedFirstName",
+                "ordering": 1
+              },
+              {
+                "key": "NormalizedLastName",
+                "ordering": 2
+              }
+            ],
+            "property": "Employee",
+            "table": "Employees"
+          },
+          "names": {
+            "human": "Application User",
+            "property": "ApplicationUser"
+          },
+          "owned": true,
+          "type": "oneToOne"
+        },
+        {
+          "foreign": {
+            "display": [
+              {
+                "ordering": 1,
+                "property": "Manager",
+                "subproperty": "FirstName"
+              },
+              {
+                "ordering": 2,
+                "property": "Manager",
+                "subproperty": "LastName"
+              }
+            ],
+            "entity": "EmployeeManager"
+          },
+          "names": {
+            "human": "Employee Managers",
+            "property": "EmployeeManagers"
+          },
+          "type": "oneToMany"
+        },
+        {
+          "names": {
+            "human": "First Name",
+            "property": "FirstName"
+          },
+          "normalized": true,
+          "required": true,
+          "type": "string"
+        },
+        {
+          "names": {
+            "human": "Is Test?",
+            "property": "IsTest"
+          },
+          "type": "boolean"
+        },
+        {
+          "names": {
+            "human": "Is Verified?",
+            "property": "IsVerified"
+          },
+          "type": "boolean"
+        },
+        {
+          "names": {
+            "human": "Last Name",
+            "property": "LastName"
+          },
+          "normalized": true,
+          "required": true,
+          "type": "string"
+        },
+        {
+          "foreign": {
+            "display": [
+              {
+                "ordering": 1,
+                "property": "Employee",
+                "subproperty": "FirstName"
+              },
+              {
+                "ordering": 2,
+                "property": "Employee",
+                "subproperty": "LastName"
+              }
+            ],
+            "entity": "EmployeeManager"
+          },
+          "names": {
+            "human": "Manager Employees",
+            "property": "ManagerEmployees"
+          },
+          "type": "oneToMany"
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "key": "NormalizedFirstName",
+          "object": "Employee",
+          "ordering": 1
+        },
+        {
+          "key": "NormalizedLastName",
+          "object": "Employee",
+          "ordering": 2
+        },
+        {
+          "key": "NormalizedFirstName",
+          "object": "Manager",
+          "ordering": 3
+        },
+        {
+          "key": "NormalizedLastName",
+          "object": "Manager",
+          "ordering": 4
+        }
+      ],
+      "names": {
+        "entity": "EmployeeManager",
+        "human": "Employee Manager",
+        "plural": "Employee Managers",
+        "table": "EmployeeManagers",
+        "url": "employee-manager"
+      },
+      "properties": [
+        {
+          "foreign": {
+            "display": [
+              {
+                "ordering": 1,
+                "property": "FirstName"
+              }
+            ],
+            "entity": "Employee",
+            "keys": [
+              {
+                "key": "NormalizedFirstName",
+                "ordering": 1
+              },
+              {
+                "key": "NormalizedLastName",
+                "ordering": 2
+              }
+           ],
+            "property": "EmployeeManagers",
+            "table": "Employees"
+          },
+          "names": {
+            "human": "Employee",
+            "property": "Employee"
+          },
+          "type": "manyToOne"
+        },
+        {
+          "foreign": {
+            "display": [
+              {
+                "ordering": 1,
+                "property": "FirstName"
+              },
+              {
+                "ordering": 2,
+                "property": "LastName"
+              }
+            ],
+            "entity": "Employee",
+            "keys": [
+              {
+                "key": "NormalizedFirstName",
+                "ordering": 1
+              },
+              {
+                "key": "NormalizedLastName",
+                "ordering": 2
+              }
+            ],
+            "property": "ManagerEmployees",
+            "table": "Employees"
+          },
+          "names": {
+            "human": "Manager",
+            "property": "Manager"
+          },
+          "type": "manyToOne"
+        }
+      ]
+    }
+  ],
+  "names": {
+    "human": "Intrepion Employee Managers",
+    "namespace": "Intrepion.EmployeeManagers"
+  },
+  "version": "0.1.0"
+}
