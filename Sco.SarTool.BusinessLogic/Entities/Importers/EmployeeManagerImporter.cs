@@ -63,6 +63,7 @@ public static class EmployeeManagerImporter
 
                 var dbEmployeeManager = await context.EmployeeManagers.SingleOrDefaultAsync(
                     x => true
+                    && x.Employee.Equals(employee)
                     // CompositeKeyCodePlaceholder
                 );
 
