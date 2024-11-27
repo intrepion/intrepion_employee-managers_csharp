@@ -8,6 +8,7 @@ entity Employee {
     ' EmployeeKeyCodePlaceholder
     --
     Email : string
+    FirstName : string
     ' EmployeePropertyCodePlaceholder
 }
 
