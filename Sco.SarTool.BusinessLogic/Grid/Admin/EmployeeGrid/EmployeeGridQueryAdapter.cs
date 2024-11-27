@@ -18,6 +18,7 @@ public class EmployeeGridQueryAdapter
             { EmployeeFilterColumns.FirstName, x => x != null && x.FirstName != null ? x.FirstName : string.Empty },
             { EmployeeFilterColumns.IsTest, x => x != null ? x.IsTest.ToString() : string.Empty },
             { EmployeeFilterColumns.IsVerified, x => x != null ? x.IsVerified.ToString() : string.Empty },
+            { EmployeeFilterColumns.LastName, x => x != null && x.LastName != null ? x.LastName : string.Empty },
             // SortExpressionCodePlaceholder
         };
 
