@@ -18,5 +18,6 @@ public class Employee
     [Required]
     public string NormalizedFirstName { get; set; } = string.Empty;
     public bool IsTest { get; set; }
+    public bool IsVerified { get; set; }
     // ActualPropertyPlaceholder
 }
