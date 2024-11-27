@@ -5,5 +5,6 @@ public enum EmployeeFilterColumns
     Id,
 
     Email,
+    FirstName,
     // FilterColumnCodePlaceholder
 }
