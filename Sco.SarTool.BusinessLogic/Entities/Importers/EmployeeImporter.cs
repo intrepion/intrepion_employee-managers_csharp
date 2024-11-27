@@ -20,9 +20,9 @@ public static class EmployeeImporter
             return;
         }
 
-        if (context.TableNamePlaceholder is null)
+        if (context.Employees is null)
         {
-            Console.WriteLine("Database table not found: context.TableNamePlaceholder");
+            Console.WriteLine("Database table not found: context.Employees");
             return;
         }
 
@@ -61,14 +61,14 @@ public static class EmployeeImporter
                     // NewEntityCodePlaceholder
                 };
 
-                var dbEmployee = await context.TableNamePlaceholder.SingleOrDefaultAsync(
+                var dbEmployee = await context.Employees.SingleOrDefaultAsync(
                     x => true
                     // CompositeKeyCodePlaceholder
                 );
 
                 if (dbEmployee is null)
                 {
-                    await context.TableNamePlaceholder.AddAsync(employee);
+                    await context.Employees.AddAsync(employee);
                 }
                 else
                 {
