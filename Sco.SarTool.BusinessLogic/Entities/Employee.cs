@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ApplicationNamePlaceholder.BusinessLogic.Entities;
+namespace Sco.SarTool.BusinessLogic.Entities;
 
 public class Employee
 {
