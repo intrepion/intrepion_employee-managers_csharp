@@ -22,6 +22,7 @@ public partial class EmployeeAdminPages : PageTest
         await Page.GetByLabel("Email:", new() { Exact = true }).FillAsync("aEmail" + aRandomString);
         await Page.GetByLabel("First Name:", new() { Exact = true }).FillAsync("aFirstName" + aRandomString);
         await Page.GetByLabel("Is Test?:", new() { Exact = true }).CheckAsync();
+        await Page.GetByLabel("Is Verified?:", new() { Exact = true }).CheckAsync();
         // CreatePropertyCodePlaceholder
 
         await Page.GetByRole(AriaRole.Button, new() { Name = "Submit" }).ClickAsync();
