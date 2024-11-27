@@ -11,5 +11,6 @@ public class Employee
     [Required]
     public string Email { get; set; } = string.Empty;
     [Required]
+    public string NormalizedEmail { get; set; } = string.Empty;
     // ActualPropertyPlaceholder
 }
