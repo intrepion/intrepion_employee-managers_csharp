@@ -16,6 +16,14 @@ entity Employee {
     ' EmployeePropertyCodePlaceholder
 }
 
+entity EmployeeManager {
+    Id : Guid
+    --
+    ' EmployeeManagerKeyCodePlaceholder
+    --
+    ' EmployeeManagerPropertyCodePlaceholder
+}
+
 ' EntityCodePlaceholder
 
 Employee |o--o| ApplicationUser
