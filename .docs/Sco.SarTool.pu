@@ -3,6 +3,7 @@
 entity Employee {
     Id : Guid
     --
+    ApplicationUser : ApplicationUser
     ' EmployeeKeyCodePlaceholder
     --
     ' EmployeePropertyCodePlaceholder
