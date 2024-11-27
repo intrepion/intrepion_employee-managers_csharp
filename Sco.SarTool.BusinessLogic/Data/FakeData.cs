@@ -1,7 +1,7 @@
-﻿using ApplicationNamePlaceholder.BusinessLogic.Entities;
+﻿using Sco.SarTool.BusinessLogic.Entities;
 using Bogus;
 
-namespace ApplicationNamePlaceholder.BusinessLogic.Data;
+namespace Sco.SarTool.BusinessLogic.Data;
 
 public static class FakeData
 {

@@ -1,4 +1,4 @@
-﻿namespace ApplicationNamePlaceholder.BusinessLogic.Data;
+﻿namespace Sco.SarTool.BusinessLogic.Data;
 
 public class EditSuccess
 {
