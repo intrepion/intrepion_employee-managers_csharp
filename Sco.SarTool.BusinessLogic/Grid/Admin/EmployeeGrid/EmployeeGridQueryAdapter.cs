@@ -1,9 +1,9 @@
 using System.Diagnostics;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using ApplicationNamePlaceholder.BusinessLogic.Entities;
+using Sco.SarTool.BusinessLogic.Entities;
 
-namespace ApplicationNamePlaceholder.BusinessLogic.Grid.Admin.EntityNamePlaceholderGrid;
+namespace Sco.SarTool.BusinessLogic.Grid.Admin.EntityNamePlaceholderGrid;
 
 public class EntityNamePlaceholderGridQueryAdapter
 {
