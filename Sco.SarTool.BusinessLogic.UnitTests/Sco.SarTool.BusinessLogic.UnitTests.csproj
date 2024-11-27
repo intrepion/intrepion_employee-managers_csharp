@@ -21,4 +21,8 @@
     <Using Include="NUnit.Framework" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Sco.SarTool.BusinessLogic\Sco.SarTool.BusinessLogic.csproj" />
+  </ItemGroup>
+
 </Project>
