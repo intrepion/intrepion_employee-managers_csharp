@@ -15,5 +15,6 @@ public class Employee
     public ICollection<EmployeeManager> EmployeeManagers { get; set; } = [];
     [Required]
     public string FirstName { get; set; } = string.Empty;
+    [Required]
     // ActualPropertyPlaceholder
 }
