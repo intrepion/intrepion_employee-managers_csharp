@@ -1,0 +1,5 @@
+"Email"|"EmailConfirmed"|"Employee_NormalizedFirstName"|"Employee_NormalizedLastName"|"Password"|"PhoneNumber"|"UserName"
+"a@a.a"|"true"|"A"|"A"|"!QAZ1qaz"||"a"
+"B@B.B"|"true"|"B"|"B"|"!QAZ1qaz"||"B"
+"c@c.c"|"true"|"C"|"C"|"!QAZ1qaz"||"c"
+"intrepion@gmail.com"|"true"|"OLIVER"|"FORRAL"|"!QAZ1qaz"||"intrepion"
