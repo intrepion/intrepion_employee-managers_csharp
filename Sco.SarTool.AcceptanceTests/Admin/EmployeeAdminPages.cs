@@ -27,6 +27,7 @@ public partial class EmployeeAdminPages : PageTest
         await Page.GetByRole(AriaRole.Link, new() { Name = "Edit" }).ClickAsync();
         await Expect(Page).ToHaveTitleAsync("Employee Edit");
 
+        await Page.GetByLabel("Email:", new() { Exact = true }).FillAsync("someEmail" + someRandomString);
         // ModifyPropertyCodePlaceholder
 
         await Page.GetByRole(AriaRole.Button, new() { Name = "Submit" }).ClickAsync();
