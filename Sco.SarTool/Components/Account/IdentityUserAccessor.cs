@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Sco.SarTool.Data;
+﻿using ApplicationNamePlaceholder.BusinessLogic.Entities;
+using Microsoft.AspNetCore.Identity;
 
-namespace Sco.SarTool.Components.Account;
+namespace ApplicationNamePlaceholder.Components.Account;
 
 internal sealed class IdentityUserAccessor(UserManager<ApplicationUser> userManager, IdentityRedirectManager redirectManager)
 {
