@@ -61,6 +61,7 @@ public static class EmployeeImporter
                     Email = record.Email,
                     NormalizedEmail = record.Email.ToUpper(CultureInfo.InvariantCulture),
                     FirstName = record.FirstName,
+                    NormalizedFirstName = record.FirstName.ToUpper(CultureInfo.InvariantCulture),
                     // NewEntityCodePlaceholder
                 };
 
