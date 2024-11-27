@@ -1,4 +1,4 @@
-﻿namespace ApplicationNamePlaceholder.BusinessLogic.Grid.Admin.ApplicationUserGrid;
+﻿namespace Sco.SarTool.BusinessLogic.Grid.Admin.ApplicationUserGrid;
 
 public interface IApplicationUserFilters
 {
