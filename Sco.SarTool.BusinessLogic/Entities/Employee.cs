@@ -21,5 +21,6 @@ public class Employee
     public bool IsVerified { get; set; }
     [Required]
     public string LastName { get; set; } = string.Empty;
+    [Required]
     // ActualPropertyPlaceholder
 }
