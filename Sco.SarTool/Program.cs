@@ -1,15 +1,15 @@
-﻿using ApplicationNamePlaceholder.BusinessLogic.Data;
-using ApplicationNamePlaceholder.BusinessLogic.Entities;
-using ApplicationNamePlaceholder.BusinessLogic.Grid;
-using ApplicationNamePlaceholder.BusinessLogic.Grid.Admin.ApplicationRoleGrid;
-using ApplicationNamePlaceholder.BusinessLogic.Grid.Admin.ApplicationUserGrid;
+﻿using Sco.SarTool.BusinessLogic.Data;
+using Sco.SarTool.BusinessLogic.Entities;
+using Sco.SarTool.BusinessLogic.Grid;
+using Sco.SarTool.BusinessLogic.Grid.Admin.ApplicationRoleGrid;
+using Sco.SarTool.BusinessLogic.Grid.Admin.ApplicationUserGrid;
 
 using Sco.SarTool.BusinessLogic.Grid.Admin.EmployeeGrid;
 using Sco.SarTool.BusinessLogic.Grid.Admin.EmployeeManagerGrid;
 // GridNamespaceCodePlaceholder
 
-using ApplicationNamePlaceholder.Components;
-using ApplicationNamePlaceholder.Components.Account;
+using Sco.SarTool.Components;
+using Sco.SarTool.Components.Account;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -110,7 +110,7 @@ app.UseAntiforgery();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
     .AddInteractiveWebAssemblyRenderMode()
-    .AddAdditionalAssemblies(typeof(ApplicationNamePlaceholder.Client._Imports).Assembly);
+    .AddAdditionalAssemblies(typeof(Sco.SarTool.Client._Imports).Assembly);
 
 app.MapAdditionalIdentityEndpoints();
 
