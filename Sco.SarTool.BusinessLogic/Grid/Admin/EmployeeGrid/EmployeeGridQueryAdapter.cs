@@ -14,6 +14,7 @@ public class EmployeeGridQueryAdapter
         {
             { EmployeeFilterColumns.Id, x => !x.Id.Equals(Guid.Empty) ? x.Id.ToString() : string.Empty },
 
+            { EmployeeFilterColumns.Email, x => x != null && x.Email != null ? x.Email : string.Empty },
             // SortExpressionCodePlaceholder
         };
 
