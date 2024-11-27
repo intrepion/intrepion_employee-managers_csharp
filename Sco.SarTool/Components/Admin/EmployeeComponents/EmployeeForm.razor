@@ -53,6 +53,23 @@
 
     private void HandleEmailChange(ChangeEventArgs changeEventArgs)
     {
+        if (Employee == null)
+        {
+            return;
+        }
+
+        if (changeEventArgs == null)
+        {
+            return;
+        }
+
+        if (changeEventArgs.Value == null)
+        {
+            return;
+        }
+
+        Employee.NormalizedEmail = ((string)changeEventArgs.Value).ToUpperInvariant();
+
         // NormalizedCodeEmailPlaceholder
     }
 
