@@ -1,4 +1,4 @@
-﻿namespace ApplicationNamePlaceholder.BusinessLogic.Grid;
+﻿namespace Sco.SarTool.BusinessLogic.Grid;
 
 public class PageHelper : IPageHelper
 {
