@@ -10,5 +10,6 @@ public class Employee
     public ApplicationUser? ApplicationUser { get; set; }
     [Required]
     public string Email { get; set; } = string.Empty;
+    [Required]
     // ActualPropertyPlaceholder
 }
