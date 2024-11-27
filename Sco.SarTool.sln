@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sco.SarTool.Server.Componen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sco.SarTool.Server.ControllerTests", "Sco.SarTool.Server.ControllerTests\Sco.SarTool.Server.ControllerTests.csproj", "{65A230EC-381A-4BF4-8107-563B1FC80DB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sco.SarTool.Shared", "Sco.SarTool.Shared\Sco.SarTool.Shared.csproj", "{693B0CA9-BECA-409B-8D4B-B8E37DAA043F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -138,6 +140,18 @@ Global
 		{65A230EC-381A-4BF4-8107-563B1FC80DB6}.Release|x64.Build.0 = Release|Any CPU
 		{65A230EC-381A-4BF4-8107-563B1FC80DB6}.Release|x86.ActiveCfg = Release|Any CPU
 		{65A230EC-381A-4BF4-8107-563B1FC80DB6}.Release|x86.Build.0 = Release|Any CPU
+		{693B0CA9-BECA-409B-8D4B-B8E37DAA043F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{693B0CA9-BECA-409B-8D4B-B8E37DAA043F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{693B0CA9-BECA-409B-8D4B-B8E37DAA043F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{693B0CA9-BECA-409B-8D4B-B8E37DAA043F}.Debug|x64.Build.0 = Debug|Any CPU
+		{693B0CA9-BECA-409B-8D4B-B8E37DAA043F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{693B0CA9-BECA-409B-8D4B-B8E37DAA043F}.Debug|x86.Build.0 = Debug|Any CPU
+		{693B0CA9-BECA-409B-8D4B-B8E37DAA043F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{693B0CA9-BECA-409B-8D4B-B8E37DAA043F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{693B0CA9-BECA-409B-8D4B-B8E37DAA043F}.Release|x64.ActiveCfg = Release|Any CPU
+		{693B0CA9-BECA-409B-8D4B-B8E37DAA043F}.Release|x64.Build.0 = Release|Any CPU
+		{693B0CA9-BECA-409B-8D4B-B8E37DAA043F}.Release|x86.ActiveCfg = Release|Any CPU
+		{693B0CA9-BECA-409B-8D4B-B8E37DAA043F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
