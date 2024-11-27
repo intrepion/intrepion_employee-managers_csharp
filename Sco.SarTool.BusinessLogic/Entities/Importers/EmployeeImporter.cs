@@ -85,6 +85,7 @@ public static class EmployeeImporter
                     dbEmployee.Email = record.Email;
                     dbEmployee.FirstName = record.FirstName;
                     dbEmployee.IsTest = record.IsTest;
+                    dbEmployee.IsVerified = record.IsVerified;
                     // ExistingEntityCodePlaceholder
                 }
             }
