@@ -1,8 +1,8 @@
-﻿namespace Sco.SarTool.BusinessLogic.Grid.Admin.EntityNamePlaceholderGrid;
+﻿namespace Sco.SarTool.BusinessLogic.Grid.Admin.EmployeeManagerGrid;
 
-public interface IEntityNamePlaceholderFilters
+public interface IEmployeeManagerFilters
 {
-    EntityNamePlaceholderFilterColumns FilterColumn { get; set; }
+    EmployeeManagerFilterColumns FilterColumn { get; set; }
 
     bool Loading { get; set; }
 
@@ -12,5 +12,5 @@ public interface IEntityNamePlaceholderFilters
 
     bool SortAscending { get; set; }
 
-    EntityNamePlaceholderFilterColumns SortColumn { get; set; }
+    EmployeeManagerFilterColumns SortColumn { get; set; }
 }
