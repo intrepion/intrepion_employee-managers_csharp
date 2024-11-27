@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Sco.SarTool.Data;
 
 namespace Sco.SarTool.Components.Account;

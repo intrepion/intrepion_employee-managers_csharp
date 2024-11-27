@@ -1,6 +1,6 @@
-using Sco.SarTool.Client;
-using Microsoft.AspNetCore.Components.Authorization;
+﻿using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Sco.SarTool.Client;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 

@@ -1,4 +1,4 @@
-namespace Sco.SarTool.Client;
+﻿namespace Sco.SarTool.Client;
 
 // Add properties to this class and update the server and client AuthenticationStateProviders
 // to expose more information about the authenticated user to the client.
