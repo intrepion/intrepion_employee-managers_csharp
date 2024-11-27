@@ -56,6 +56,10 @@
                 <SortIndicator Column="@(EmployeeFilterColumns.IsTest)" />&nbsp;IsTest
             </div>
 
+            <div class="col-3" @onclick="@(async ()=>await ToggleAsync(EmployeeFilterColumns.IsVerified))">
+                <SortIndicator Column="@(EmployeeFilterColumns.IsVerified)" />&nbsp;IsVerified
+            </div>
+
             @* SortIndicatorCodePlaceholder *@
 
         </div>
