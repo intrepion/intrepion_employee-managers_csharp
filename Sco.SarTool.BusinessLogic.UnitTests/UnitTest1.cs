@@ -1,4 +1,4 @@
-namespace Sco.SarTool.BusinessLogic.UnitTests;
+﻿namespace Sco.SarTool.BusinessLogic.UnitTests;
 
 public class Tests
 {
