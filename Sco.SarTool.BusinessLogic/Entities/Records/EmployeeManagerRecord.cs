@@ -1,4 +1,4 @@
-﻿namespace ApplicationNamePlaceholder.BusinessLogic.Entities.Records;
+﻿namespace Sco.SarTool.BusinessLogic.Entities.Records;
 
 public class EmployeeManagerRecord
 {
