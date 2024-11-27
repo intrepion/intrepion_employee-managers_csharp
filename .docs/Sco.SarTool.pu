@@ -6,6 +6,7 @@ entity Employee {
     ApplicationUser : ApplicationUser
     ' EmployeeKeyCodePlaceholder
     --
+    Email : string
     ' EmployeePropertyCodePlaceholder
 }
 
