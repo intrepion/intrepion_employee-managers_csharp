@@ -16,5 +16,6 @@ public class Employee
     [Required]
     public string FirstName { get; set; } = string.Empty;
     [Required]
+    public string NormalizedFirstName { get; set; } = string.Empty;
     // ActualPropertyPlaceholder
 }
