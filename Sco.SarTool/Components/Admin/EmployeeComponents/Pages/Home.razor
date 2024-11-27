@@ -44,6 +44,10 @@
                 <SortIndicator Column="@(EmployeeFilterColumns.Id)" />&nbsp;Id
             </div>
 
+            <div class="col-3" @onclick="@(async ()=>await ToggleAsync(EmployeeFilterColumns.Email))">
+                <SortIndicator Column="@(EmployeeFilterColumns.Email)" />&nbsp;Email
+            </div>
+
             @* SortIndicatorCodePlaceholder *@
 
         </div>
