@@ -1,11 +1,11 @@
 ﻿using System.Globalization;
 using CsvHelper;
 using CsvHelper.Configuration;
-using ApplicationNamePlaceholder.BusinessLogic.Data;
-using ApplicationNamePlaceholder.BusinessLogic.Entities.Records;
+using Sco.SarTool.BusinessLogic.Data;
+using Sco.SarTool.BusinessLogic.Entities.Records;
 using Microsoft.EntityFrameworkCore;
 
-namespace ApplicationNamePlaceholder.BusinessLogic.Entities.Importers;
+namespace Sco.SarTool.BusinessLogic.Entities.Importers;
 
 public static class ApplicationUserRoleImporter
 {
