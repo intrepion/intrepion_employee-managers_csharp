@@ -58,6 +58,7 @@ public static class EmployeeImporter
                 {
                     ApplicationUserUpdatedBy = applicationUserUpdatedBy,
 
+                    Email = record.Email,
                     // NewEntityCodePlaceholder
                 };
 
