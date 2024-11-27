@@ -14,5 +14,6 @@ public class Employee
     public string NormalizedEmail { get; set; } = string.Empty;
     public ICollection<EmployeeManager> EmployeeManagers { get; set; } = [];
     [Required]
+    public string FirstName { get; set; } = string.Empty;
     // ActualPropertyPlaceholder
 }
