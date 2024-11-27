@@ -44,6 +44,7 @@ public static class EmployeeManagerImporter
 
         var records = csv.GetRecords<EmployeeManagerRecord>();
 
+        var employeeList = await context.Employees.ToListAsync();
         // EntityListCodePlaceholder
 
         foreach (var record in records)
