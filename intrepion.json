@@ -30,7 +30,11 @@
             "entity": "ApplicationUser",
             "keys": [
               {
-                "key": "NormalizedEmail",
+                "key": "NormalizedFirstName",
+                "ordering": 1
+              },
+              {
+                "key": "NormalizedLastName",
                 "ordering": 1
               }
             ],
@@ -223,8 +227,8 @@
     }
   ],
   "names": {
-    "human": "SCO SAR Tool",
-    "namespace": "Sco.SarTool"
+    "human": "Intrepion Employee Managers",
+    "namespace": "Intrepion.EmployeeManagers"
   },
   "version": "0.1.0"
 }
