@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ApplicationNamePlaceholder.BusinessLogic.Entities.Configuration;
+namespace Sco.SarTool.BusinessLogic.Entities.Configuration;
 
 public class ApplicationUserLoginEtc : IEntityTypeConfiguration<ApplicationUserLogin>
 {
