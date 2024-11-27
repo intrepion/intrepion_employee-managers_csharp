@@ -1,5 +1,13 @@
 @startuml
 
+entity Employee {
+    Id : Guid
+    --
+    ' EmployeeKeyCodePlaceholder
+    --
+    ' EmployeePropertyCodePlaceholder
+}
+
 ' EntityCodePlaceholder
 
 ' RelationshipCodePlaceholder
