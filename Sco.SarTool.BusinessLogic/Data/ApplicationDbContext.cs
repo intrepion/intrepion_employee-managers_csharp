@@ -24,6 +24,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
         new ApplicationUserTokenEtc().Configure(builder.Entity<ApplicationUserToken>());
 
         new EmployeeEtc().Configure(builder.Entity<Employee>());
+        new EmployeeManagerEtc().Configure(builder.Entity<EmployeeManager>());
         // EntityTypeCfgCodePlaceholder
     }
 }
