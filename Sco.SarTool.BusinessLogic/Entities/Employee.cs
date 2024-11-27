@@ -8,5 +8,6 @@ public class Employee
     public Guid Id { get; set; }
 
     public ApplicationUser? ApplicationUser { get; set; }
+    [Required]
     // ActualPropertyPlaceholder
 }
