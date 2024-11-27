@@ -1,4 +1,4 @@
-namespace Sco.SarTool.Server.ControllerTests;
+﻿namespace Sco.SarTool.Server.ControllerTests;
 
 public class Tests
 {
