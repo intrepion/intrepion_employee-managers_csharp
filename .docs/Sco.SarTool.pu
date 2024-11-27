@@ -30,6 +30,7 @@ entity EmployeeManager {
 
 Employee |o--o| ApplicationUser
 EmployeeManager }o--o| Employee
+EmployeeManager }o--o| Employee
 ' RelationshipCodePlaceholder
 
 @enduml
