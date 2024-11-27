@@ -1,6 +1,6 @@
-﻿namespace Sco.SarTool.BusinessLogic.Grid.Admin.EntityNamePlaceholderGrid;
+﻿namespace Sco.SarTool.BusinessLogic.Grid.Admin.EmployeeManagerGrid;
 
-public enum EntityNamePlaceholderFilterColumns
+public enum EmployeeManagerFilterColumns
 {
     Id,
 
