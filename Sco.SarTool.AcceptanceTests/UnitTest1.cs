@@ -1,4 +1,4 @@
-namespace Sco.SarTool.AcceptanceTests;
+﻿namespace Sco.SarTool.AcceptanceTests;
 
 public class Tests
 {
