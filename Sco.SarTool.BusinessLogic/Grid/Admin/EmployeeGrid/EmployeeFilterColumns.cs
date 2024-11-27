@@ -8,5 +8,6 @@ public enum EmployeeFilterColumns
     FirstName,
     IsTest,
     IsVerified,
+    LastName,
     // FilterColumnCodePlaceholder
 }
