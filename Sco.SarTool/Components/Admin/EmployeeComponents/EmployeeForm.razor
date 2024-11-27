@@ -135,6 +135,23 @@
 
     private void HandleLastNameChange(ChangeEventArgs changeEventArgs)
     {
+        if (Employee == null)
+        {
+            return;
+        }
+
+        if (changeEventArgs == null)
+        {
+            return;
+        }
+
+        if (changeEventArgs.Value == null)
+        {
+            return;
+        }
+
+        Employee.NormalizedLastName = ((string)changeEventArgs.Value).ToUpperInvariant();
+
         // NormalizedCodeLastNamePlaceholder
     }
 
