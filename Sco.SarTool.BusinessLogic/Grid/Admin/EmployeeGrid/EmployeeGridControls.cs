@@ -1,16 +1,16 @@
-namespace Sco.SarTool.BusinessLogic.Grid.Admin.EntityNamePlaceholderGrid;
+namespace Sco.SarTool.BusinessLogic.Grid.Admin.EmployeeGrid;
 
-public class EntityNamePlaceholderGridControls(IPageHelper pageHelper) : IEntityNamePlaceholderFilters
+public class EmployeeGridControls(IPageHelper pageHelper) : IEmployeeFilters
 {
     public IPageHelper PageHelper { get; set; } = pageHelper;
 
     public bool Loading { get; set; }
 
-    public EntityNamePlaceholderFilterColumns SortColumn { get; set; } = EntityNamePlaceholderFilterColumns.Id;
+    public EmployeeFilterColumns SortColumn { get; set; } = EmployeeFilterColumns.Id;
 
     public bool SortAscending { get; set; } = true;
 
-    public EntityNamePlaceholderFilterColumns FilterColumn { get; set; } = EntityNamePlaceholderFilterColumns.Id;
+    public EmployeeFilterColumns FilterColumn { get; set; } = EmployeeFilterColumns.Id;
 
     public string? FilterText { get; set; }
 }
