@@ -23,5 +23,6 @@ public class Employee
     public string LastName { get; set; } = string.Empty;
     [Required]
     public string NormalizedLastName { get; set; } = string.Empty;
+    public ICollection<EmployeeManager> ManagerEmployees { get; set; } = [];
     // ActualPropertyPlaceholder
 }
