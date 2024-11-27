@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Sco.SarTool.BusinessLogic\Sco.SarTool.BusinessLogic.csproj" />
+    <ProjectReference Include="..\Sco.SarTool.Shared\Sco.SarTool.Shared.csproj" />
   </ItemGroup>
 
 </Project>
