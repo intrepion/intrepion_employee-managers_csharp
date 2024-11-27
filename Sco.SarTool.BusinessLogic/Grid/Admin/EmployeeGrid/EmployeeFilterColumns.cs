@@ -7,5 +7,6 @@ public enum EmployeeFilterColumns
     Email,
     FirstName,
     IsTest,
+    IsVerified,
     // FilterColumnCodePlaceholder
 }
