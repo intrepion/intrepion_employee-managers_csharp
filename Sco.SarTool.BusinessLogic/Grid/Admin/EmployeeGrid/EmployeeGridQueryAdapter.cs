@@ -3,36 +3,36 @@ using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using Sco.SarTool.BusinessLogic.Entities;
 
-namespace Sco.SarTool.BusinessLogic.Grid.Admin.EntityNamePlaceholderGrid;
+namespace Sco.SarTool.BusinessLogic.Grid.Admin.EmployeeGrid;
 
-public class EntityNamePlaceholderGridQueryAdapter
+public class EmployeeGridQueryAdapter
 {
-    private readonly IEntityNamePlaceholderFilters controls;
+    private readonly IEmployeeFilters controls;
 
-    private readonly Dictionary<EntityNamePlaceholderFilterColumns, Expression<Func<EntityNamePlaceholder, string>>> expressions =
+    private readonly Dictionary<EmployeeFilterColumns, Expression<Func<Employee, string>>> expressions =
         new()
         {
-            { EntityNamePlaceholderFilterColumns.Id, x => !x.Id.Equals(Guid.Empty) ? x.Id.ToString() : string.Empty },
+            { EmployeeFilterColumns.Id, x => !x.Id.Equals(Guid.Empty) ? x.Id.ToString() : string.Empty },
 
             // SortExpressionCodePlaceholder
         };
 
-    private readonly Dictionary<EntityNamePlaceholderFilterColumns, Func<IQueryable<EntityNamePlaceholder>, IQueryable<EntityNamePlaceholder>>> filterQueries = [];
+    private readonly Dictionary<EmployeeFilterColumns, Func<IQueryable<Employee>, IQueryable<Employee>>> filterQueries = [];
 
-    public EntityNamePlaceholderGridQueryAdapter(IEntityNamePlaceholderFilters controls)
+    public EmployeeGridQueryAdapter(IEmployeeFilters controls)
     {
         this.controls = controls;
 
         filterQueries =
             new()
             {
-                { EntityNamePlaceholderFilterColumns.Id, x => x.Where(y => y != null && !y.Id.Equals(Guid.Empty) && this.controls.FilterText != null && y.Id.ToString().Contains(this.controls.FilterText) ) },
+                { EmployeeFilterColumns.Id, x => x.Where(y => y != null && !y.Id.Equals(Guid.Empty) && this.controls.FilterText != null && y.Id.ToString().Contains(this.controls.FilterText) ) },
 
                 // QueryExpressionCodePlaceholder
             };
     }
 
-    public async Task<ICollection<EntityNamePlaceholder>> FetchAsync(IQueryable<EntityNamePlaceholder> query)
+    public async Task<ICollection<Employee>> FetchAsync(IQueryable<Employee> query)
     {
         query = FilterAndQuery(query);
         await CountAsync(query);
@@ -41,16 +41,16 @@ public class EntityNamePlaceholderGridQueryAdapter
         return collection;
     }
 
-    public async Task CountAsync(IQueryable<EntityNamePlaceholder> query) =>
+    public async Task CountAsync(IQueryable<Employee> query) =>
         controls.PageHelper.TotalItemCount = await query.CountAsync();
 
-    public IQueryable<EntityNamePlaceholder> FetchPageQuery(IQueryable<EntityNamePlaceholder> query) =>
+    public IQueryable<Employee> FetchPageQuery(IQueryable<Employee> query) =>
         query
             .Skip(controls.PageHelper.Skip)
             .Take(controls.PageHelper.PageSize)
             .AsNoTracking();
 
-    private IQueryable<EntityNamePlaceholder> FilterAndQuery(IQueryable<EntityNamePlaceholder> root)
+    private IQueryable<Employee> FilterAndQuery(IQueryable<Employee> root)
     {
         var sb = new System.Text.StringBuilder();
 
