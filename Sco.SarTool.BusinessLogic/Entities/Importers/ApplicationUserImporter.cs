@@ -52,6 +52,8 @@ public static class ApplicationUserImporter
             var employee = employeeList.FirstOrDefault(x =>
                 true
                 && x.NormalizedEmail == record.Employee_NormalizedEmail
+            );
+
             // ManyToOneCodePlaceholder
 
             if (
