@@ -44,6 +44,7 @@ public static class ApplicationUserImporter
 
         var records = csv.GetRecords<ApplicationUserRecord>();
 
+        var employeeList = await context.Employees.ToListAsync();
         // EntityListCodePlaceholder
 
         foreach (var record in records)
