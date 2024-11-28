@@ -7,6 +7,13 @@
         <DataAnnotationsValidator />
         <ValidationSummary />
 
+        <h2>First Name</h2>
+        <p>
+            <label>
+                First Name:
+                <InputText @bind-Value="Employee.FirstName" @oninput="HandleFirstNameChange"/>
+            </label>
+        </p>
         @* PropertyFormCodePlaceholder *@
 
         <br />
