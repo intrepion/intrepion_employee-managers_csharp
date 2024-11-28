@@ -1,4 +1,4 @@
-namespace Intrepion.EmployeeManagers.Server.ControllerTests;
+﻿namespace Intrepion.EmployeeManagers.Server.ControllerTests;
 
 public class Tests
 {
