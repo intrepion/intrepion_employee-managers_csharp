@@ -49,6 +49,8 @@ public static class EmployeeManagerImporter
 
         foreach (var record in records)
         {
+            var employee = employeeList.FirstOrDefault(x =>
+                true
             // ManyToOneCodePlaceholder
 
             if (true
