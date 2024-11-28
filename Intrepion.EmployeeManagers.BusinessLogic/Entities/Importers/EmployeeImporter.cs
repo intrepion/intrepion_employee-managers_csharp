@@ -77,6 +77,7 @@ public static class EmployeeImporter
                 {
                     dbEmployee.ApplicationUserUpdatedBy = applicationUserUpdatedBy;
 
+                    dbEmployee.FirstName = record.FirstName;
                     // ExistingEntityCodePlaceholder
                 }
             }
