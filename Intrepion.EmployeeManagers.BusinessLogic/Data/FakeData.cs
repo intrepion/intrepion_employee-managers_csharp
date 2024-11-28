@@ -1,7 +1,7 @@
-﻿using ApplicationNamePlaceholder.BusinessLogic.Entities;
+﻿using Intrepion.EmployeeManagers.BusinessLogic.Entities;
 using Bogus;
 
-namespace ApplicationNamePlaceholder.BusinessLogic.Data;
+namespace Intrepion.EmployeeManagers.BusinessLogic.Data;
 
 public static class FakeData
 {
