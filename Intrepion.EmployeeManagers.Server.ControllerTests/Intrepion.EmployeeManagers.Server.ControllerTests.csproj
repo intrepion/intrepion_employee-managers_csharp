@@ -21,4 +21,8 @@
     <Using Include="NUnit.Framework" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Intrepion.EmployeeManagers\Intrepion.EmployeeManagers.csproj" />
+  </ItemGroup>
+
 </Project>
