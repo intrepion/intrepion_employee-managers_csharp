@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Microsoft.AspNetCore.Components;
 
-namespace Intrepion.EmployeeManagers.Components.Account;
+namespace ApplicationNamePlaceholder.Components.Account;
 
 internal sealed class IdentityRedirectManager(NavigationManager navigationManager)
 {
