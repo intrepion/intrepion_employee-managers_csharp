@@ -11,5 +11,6 @@ public class Employee
 
     public ApplicationUser? ApplicationUser { get; set; }
     public ICollection<EmployeeManager> EmployeeManagers { get; set; } = [];
+    [Required]
     // ActualPropertyPlaceholder
 }
