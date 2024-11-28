@@ -7,6 +7,7 @@ entity Employee {
     EmployeeManagers : ICollection<EmployeeManager>
     ' EmployeeKeyCodePlaceholder
     --
+    FirstName : string
     ' EmployeePropertyCodePlaceholder
 }
 
