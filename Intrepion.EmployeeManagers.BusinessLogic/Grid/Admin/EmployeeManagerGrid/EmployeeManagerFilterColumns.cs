@@ -1,6 +1,6 @@
-﻿namespace Intrepion.EmployeeManagers.BusinessLogic.Grid.Admin.EntityNamePlaceholderGrid;
+﻿namespace Intrepion.EmployeeManagers.BusinessLogic.Grid.Admin.EmployeeManagerGrid;
 
-public enum EntityNamePlaceholderFilterColumns
+public enum EmployeeManagerFilterColumns
 {
     Id,
 
