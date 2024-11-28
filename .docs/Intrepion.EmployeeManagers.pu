@@ -27,6 +27,7 @@ entity EmployeeManager {
 ' EntityCodePlaceholder
 
 Employee |o--o| ApplicationUser
+EmployeeManager }o--o| Employee
 ' RelationshipCodePlaceholder
 
 @enduml
