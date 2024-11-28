@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 
-namespace ApplicationNamePlaceholder.BusinessLogic.Entities;
+namespace Intrepion.EmployeeManagers.BusinessLogic.Entities;
 
 public class ApplicationRole : IdentityRole<Guid>
 {

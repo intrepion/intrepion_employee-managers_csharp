@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ApplicationNamePlaceholder.BusinessLogic.Entities;
+namespace Intrepion.EmployeeManagers.BusinessLogic.Entities;
 
 public class EmployeeManager
 {
