@@ -10,5 +10,6 @@ public class EmployeeManager
     public DateTime UpdateDateTime { get; set; }
 
     public Employee? Employee { get; set; }
+    public Employee? Manager { get; set; }
     // ActualPropertyPlaceholder
 }
