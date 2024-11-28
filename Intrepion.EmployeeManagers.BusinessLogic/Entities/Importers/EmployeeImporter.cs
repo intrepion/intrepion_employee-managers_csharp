@@ -54,7 +54,7 @@ public static class EmployeeImporter
                 // NullCheckCodePlaceholder
             )
             {
-                var LowercaseNamePlaceholder = new Employee
+                var employee = new Employee
                 {
                     ApplicationUserUpdatedBy = applicationUserUpdatedBy,
 
@@ -68,7 +68,7 @@ public static class EmployeeImporter
 
                 if (dbEmployee is null)
                 {
-                    await context.TableNamePlaceholder.AddAsync(LowercaseNamePlaceholder);
+                    await context.TableNamePlaceholder.AddAsync(employee);
                 }
                 else
                 {
