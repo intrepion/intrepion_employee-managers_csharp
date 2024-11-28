@@ -74,6 +74,9 @@ builder.Services.AddScoped<ApplicationUserGridQueryAdapter>();
 builder.Services.AddScoped<IEmployeeFilters, EmployeeGridControls>();
 builder.Services.AddScoped<EmployeeGridQueryAdapter>();
 
+builder.Services.AddScoped<IEmployeeManagerFilters, EmployeeManagerGridControls>();
+builder.Services.AddScoped<EmployeeManagerGridQueryAdapter>();
+
 // RegisterServerServiceCodePlaceholder
 
 var app = builder.Build();
