@@ -11,6 +11,10 @@ public class EmployeeEtc : IEntityTypeConfiguration<Employee>
             .WithMany(x => x.UpdatedEmployees)
             .OnDelete(DeleteBehavior.Restrict);
 
+        builder.HasOne(x => x.ApplicationUser)
+            .WithOne(x => x.Employee)
+            .HasForeignKey<ApplicationUser>(x => x.EmployeeId)
+            .OnDelete(DeleteBehavior.Restrict);
         // EntityConfigurationCodePlaceholder
     }
 }
