@@ -53,6 +53,7 @@ public static class EmployeeManagerImporter
             if (true
                 && employee is not null
                 && employee is not null
+                && manager is not null
                 // NullCheckCodePlaceholder
             )
             {
