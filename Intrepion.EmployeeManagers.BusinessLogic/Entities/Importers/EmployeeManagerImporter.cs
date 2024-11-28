@@ -69,6 +69,7 @@ public static class EmployeeManagerImporter
                     && x.Employee.Equals(employee)
                     && x.Employee.Equals(employee)
                     && x.Manager.Equals(manager)
+                    && x.Manager.Equals(manager)
                     // CompositeKeyCodePlaceholder
                 );
 
