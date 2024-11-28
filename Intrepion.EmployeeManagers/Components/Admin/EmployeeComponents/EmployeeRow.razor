@@ -1,10 +1,10 @@
-@inject IEntityNamePlaceholderFilters Filters
+@inject IEmployeeFilters Filters
 
-@if (CurrentEntityNamePlaceholder is not null)
+@if (CurrentEmployee is not null)
 {
-    <div class="row EntityNamePlaceholder-detail">
+    <div class="row Employee-detail">
         <div class="col-2 text-right">
-            <a title="Edit" href="admin/UrlNamePlaceholder/edit/@CurrentEntityNamePlaceholder.Id" style="text-decoration:none">
+            <a title="Edit" href="admin/UrlNamePlaceholder/edit/@CurrentEmployee.Id" style="text-decoration:none">
                 &nbsp;📝&nbsp;
             </a>
             @if (CanDelete)
@@ -22,7 +22,7 @@
         <div class="col-3">
             <a href="@ViewLink" alt="View Details"
                title="View Details">
-                @CurrentEntityNamePlaceholder.Id
+                @CurrentEmployee.Id
             </a>
         </div>
 
@@ -40,32 +40,32 @@
 }
 
 @code {
-    private EntityNamePlaceholder _currentEntityNamePlaceholder = new EntityNamePlaceholder();
+    private Employee _currentEmployee = new Employee();
 
     [Parameter]
-    public EntityNamePlaceholder CurrentEntityNamePlaceholder
+    public Employee CurrentEmployee
     {
-        get => _currentEntityNamePlaceholder;
+        get => _currentEmployee;
         set
         {
-            if (value is not null && !value.Equals(_currentEntityNamePlaceholder))
+            if (value is not null && !value.Equals(_currentEmployee))
             {
-                _currentEntityNamePlaceholder = value;
+                _currentEmployee = value;
                 DeleteConfirmation = false;
             }
         }
     }
 
     [Parameter]
-    public EventCallback DeleteEntityNamePlaceholder { get; set; }
+    public EventCallback DeleteEmployee { get; set; }
 
     [CascadingParameter]
     public GridWrapper? Wrapper { get; set; }
 
     private bool CanDelete =>
-        !DeleteConfirmation && (Wrapper?.DeleteRequestId.Equals(Guid.Empty) == true || Wrapper?.DeleteRequestId.Equals(CurrentEntityNamePlaceholder?.Id) == true);
+        !DeleteConfirmation && (Wrapper?.DeleteRequestId.Equals(Guid.Empty) == true || Wrapper?.DeleteRequestId.Equals(CurrentEmployee?.Id) == true);
 
-    private string ViewLink => $"admin/UrlNamePlaceholder/view/{CurrentEntityNamePlaceholder?.Id}";
+    private string ViewLink => $"admin/UrlNamePlaceholder/view/{CurrentEmployee?.Id}";
 
     private bool DeleteConfirmation { get; set; }
 
@@ -91,9 +91,9 @@
         if (Wrapper?.DeleteRequestId.Equals(Guid.Empty) == true)
         {
             DeleteConfirmation = true;
-            await Wrapper.DeleteRequested.InvokeAsync(CurrentEntityNamePlaceholder.Id);
+            await Wrapper.DeleteRequested.InvokeAsync(CurrentEmployee.Id);
         }
     }
 
-    private Task DeleteAsync() => DeleteEntityNamePlaceholder.InvokeAsync(this);
+    private Task DeleteAsync() => DeleteEmployee.InvokeAsync(this);
 }
