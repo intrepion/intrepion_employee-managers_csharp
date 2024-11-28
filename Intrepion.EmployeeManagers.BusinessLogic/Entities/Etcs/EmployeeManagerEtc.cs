@@ -11,6 +11,9 @@ public class EmployeeManagerEtc : IEntityTypeConfiguration<EmployeeManager>
             .WithMany(x => x.UpdatedEmployeeManagers)
             .OnDelete(DeleteBehavior.Restrict);
 
+        builder.HasOne(x => x.Employee)
+            .WithMany(x => x.EmployeeManagers)
+            .OnDelete(DeleteBehavior.Restrict);
         // EntityConfigurationCodePlaceholder
     }
 }
