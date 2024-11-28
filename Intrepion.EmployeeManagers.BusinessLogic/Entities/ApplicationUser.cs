@@ -20,5 +20,6 @@ public class ApplicationUser : IdentityUser<Guid>
     public ICollection<Employee> UpdatedEmployees { get; set; } = [];
     public Employee? Employee { get; set; }
     public Guid? EmployeeId { get; set; }
+    public ICollection<EmployeeManager> UpdatedEmployeeManagers { get; set; } = [];
     // ActualPropertyPlaceholder
 }
