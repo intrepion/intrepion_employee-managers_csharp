@@ -59,6 +59,7 @@ public static class EmployeeImporter
                     ApplicationUserUpdatedBy = applicationUserUpdatedBy,
 
                     FirstName = record.FirstName,
+                    NormalizedFirstName = record.FirstName.ToUpper(CultureInfo.InvariantCulture),
                     // NewEntityCodePlaceholder
                 };
 
