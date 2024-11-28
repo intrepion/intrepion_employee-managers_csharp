@@ -5,6 +5,7 @@ entity Employee {
     --
     ApplicationUser : ApplicationUser
     EmployeeManagers : ICollection<EmployeeManager>
+    ManagerEmployees : ICollection<EmployeeManager>
     ' EmployeeKeyCodePlaceholder
     --
     FirstName : string
