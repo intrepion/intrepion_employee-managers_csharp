@@ -2,5 +2,6 @@
 
 public class EmployeeRecord
 {
+    public string FirstName { get; set; } = string.Empty;
     // RecordPropertyCodePlaceholder
 }
