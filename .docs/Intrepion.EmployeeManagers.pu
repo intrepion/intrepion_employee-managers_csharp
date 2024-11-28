@@ -10,6 +10,7 @@ entity Employee {
     FirstName : string
     IsTest : bool
     IsVerified : bool
+    LastName : string
     ' EmployeePropertyCodePlaceholder
 }
 
