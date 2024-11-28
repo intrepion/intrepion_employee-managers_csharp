@@ -53,6 +53,23 @@
 
     private void HandleFirstNameChange(ChangeEventArgs changeEventArgs)
     {
+        if (Employee == null)
+        {
+            return;
+        }
+
+        if (changeEventArgs == null)
+        {
+            return;
+        }
+
+        if (changeEventArgs.Value == null)
+        {
+            return;
+        }
+
+        Employee.NormalizedFirstName = ((string)changeEventArgs.Value).ToUpperInvariant();
+
         // NormalizedCodeFirstNamePlaceholder
     }
 
