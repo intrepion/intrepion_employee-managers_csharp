@@ -1,11 +1,11 @@
 ﻿using System.Globalization;
 using CsvHelper;
 using CsvHelper.Configuration;
-using ApplicationNamePlaceholder.BusinessLogic.Data;
-using ApplicationNamePlaceholder.BusinessLogic.Entities.Records;
+using Intrepion.EmployeeManagers.BusinessLogic.Data;
+using Intrepion.EmployeeManagers.BusinessLogic.Entities.Records;
 using Microsoft.EntityFrameworkCore;
 
-namespace ApplicationNamePlaceholder.BusinessLogic.Entities.Importers;
+namespace Intrepion.EmployeeManagers.BusinessLogic.Entities.Importers;
 
 public static class EmployeeImporter
 {
