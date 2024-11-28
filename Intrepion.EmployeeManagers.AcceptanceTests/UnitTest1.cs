@@ -1,4 +1,4 @@
-namespace Intrepion.EmployeeManagers.AcceptanceTests;
+﻿namespace Intrepion.EmployeeManagers.AcceptanceTests;
 
 public class Tests
 {
