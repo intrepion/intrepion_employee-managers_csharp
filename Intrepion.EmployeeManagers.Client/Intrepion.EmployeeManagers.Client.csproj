@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Intrepion.EmployeeManagers.BusinessLogic\Intrepion.EmployeeManagers.BusinessLogic.csproj" />
+    <ProjectReference Include="..\Intrepion.EmployeeManagers.Shared\Intrepion.EmployeeManagers.Shared.csproj" />
   </ItemGroup>
 
 </Project>
