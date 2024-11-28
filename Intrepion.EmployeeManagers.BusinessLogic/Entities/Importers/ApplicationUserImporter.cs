@@ -52,6 +52,7 @@ public static class ApplicationUserImporter
             var employee = employeeList.FirstOrDefault(x =>
                 true
                 && x.NormalizedFirstName == record.Employee_NormalizedFirstName
+                && x.NormalizedLastName == record.Employee_NormalizedLastName
             // ManyToOneCodePlaceholder
 
             if (
