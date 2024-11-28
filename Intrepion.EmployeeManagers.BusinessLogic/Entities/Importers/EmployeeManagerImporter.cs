@@ -60,6 +60,8 @@ public static class EmployeeManagerImporter
                 true
                 && x.NormalizedFirstName.Equals(record.Manager_NormalizedFirstName)
                 && x.NormalizedLastName.Equals(record.Manager_NormalizedLastName)
+            );
+
             // ManyToOneCodePlaceholder
 
             if (true
