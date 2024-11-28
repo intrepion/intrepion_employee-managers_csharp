@@ -1,4 +1,4 @@
-﻿namespace ApplicationNamePlaceholder.BusinessLogic.Entities.Records;
+﻿namespace Intrepion.EmployeeManagers.BusinessLogic.Entities.Records;
 
 public class ApplicationUserRecord
 {
