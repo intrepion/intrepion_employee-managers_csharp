@@ -77,6 +77,7 @@ public static class EmployeeManagerImporter
                     ApplicationUserUpdatedBy = applicationUserUpdatedBy,
 
                     Employee = employee,
+                    Manager = manager,
                     // NewEntityCodePlaceholder
                 };
 
