@@ -18,5 +18,6 @@ public class Employee
     public bool IsTest { get; set; }
     public bool IsVerified { get; set; }
     [Required]
+    public string LastName { get; set; } = string.Empty;
     // ActualPropertyPlaceholder
 }
