@@ -67,7 +67,7 @@ public static class EmployeeManagerImporter
             if (true
                 && employee is not null
                 && manager is not null
-                // NullCheckCodePlaceholder
+            // NullCheckCodePlaceholder
             )
             {
                 var employeeManager = new EmployeeManager
