@@ -19,6 +19,7 @@ entity EmployeeManager {
     Id : Guid
     --
     Employee : Employee
+    Manager : Employee
     ' EmployeeManagerKeyCodePlaceholder
     --
     ' EmployeeManagerPropertyCodePlaceholder
