@@ -1,4 +1,4 @@
-namespace Intrepion.EmployeeManagers.BusinessLogic.UnitTests;
+﻿namespace Intrepion.EmployeeManagers.BusinessLogic.UnitTests;
 
 public class Tests
 {
