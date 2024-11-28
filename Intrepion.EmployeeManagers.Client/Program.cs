@@ -1,4 +1,4 @@
-using Intrepion.EmployeeManagers.Client;
+﻿using Intrepion.EmployeeManagers.Client;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 

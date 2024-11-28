@@ -1,10 +1,10 @@
-using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Intrepion.EmployeeManagers.Client.Pages;
+﻿using Intrepion.EmployeeManagers.Client.Pages;
 using Intrepion.EmployeeManagers.Components;
 using Intrepion.EmployeeManagers.Components.Account;
 using Intrepion.EmployeeManagers.Data;
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 

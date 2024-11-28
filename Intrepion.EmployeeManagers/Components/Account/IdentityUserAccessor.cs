@@ -1,5 +1,5 @@
+﻿using Intrepion.EmployeeManagers.Data;
 using Microsoft.AspNetCore.Identity;
-using Intrepion.EmployeeManagers.Data;
 
 namespace Intrepion.EmployeeManagers.Components.Account;
 
