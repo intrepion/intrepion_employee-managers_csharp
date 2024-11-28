@@ -1,16 +1,16 @@
-namespace Intrepion.EmployeeManagers.BusinessLogic.Grid.Admin.EntityNamePlaceholderGrid;
+namespace Intrepion.EmployeeManagers.BusinessLogic.Grid.Admin.EmployeeManagerGrid;
 
-public class EntityNamePlaceholderGridControls(IPageHelper pageHelper) : IEntityNamePlaceholderFilters
+public class EmployeeManagerGridControls(IPageHelper pageHelper) : IEmployeeManagerFilters
 {
     public IPageHelper PageHelper { get; set; } = pageHelper;
 
     public bool Loading { get; set; }
 
-    public EntityNamePlaceholderFilterColumns SortColumn { get; set; } = EntityNamePlaceholderFilterColumns.Id;
+    public EmployeeManagerFilterColumns SortColumn { get; set; } = EmployeeManagerFilterColumns.Id;
 
     public bool SortAscending { get; set; } = true;
 
-    public EntityNamePlaceholderFilterColumns FilterColumn { get; set; } = EntityNamePlaceholderFilterColumns.Id;
+    public EmployeeManagerFilterColumns FilterColumn { get; set; } = EmployeeManagerFilterColumns.Id;
 
     public string? FilterText { get; set; }
 }
