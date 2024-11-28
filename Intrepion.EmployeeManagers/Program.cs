@@ -1,15 +1,15 @@
-﻿using ApplicationNamePlaceholder.BusinessLogic.Data;
-using ApplicationNamePlaceholder.BusinessLogic.Entities;
-using ApplicationNamePlaceholder.BusinessLogic.Grid;
-using ApplicationNamePlaceholder.BusinessLogic.Grid.Admin.ApplicationRoleGrid;
-using ApplicationNamePlaceholder.BusinessLogic.Grid.Admin.ApplicationUserGrid;
+﻿using Intrepion.EmployeeManagers.BusinessLogic.Data;
+using Intrepion.EmployeeManagers.BusinessLogic.Entities;
+using Intrepion.EmployeeManagers.BusinessLogic.Grid;
+using Intrepion.EmployeeManagers.BusinessLogic.Grid.Admin.ApplicationRoleGrid;
+using Intrepion.EmployeeManagers.BusinessLogic.Grid.Admin.ApplicationUserGrid;
 
 using Intrepion.EmployeeManagers.BusinessLogic.Grid.Admin.EmployeeGrid;
 using Intrepion.EmployeeManagers.BusinessLogic.Grid.Admin.EmployeeManagerGrid;
 // GridNamespaceCodePlaceholder
 
-using ApplicationNamePlaceholder.Components;
-using ApplicationNamePlaceholder.Components.Account;
+using Intrepion.EmployeeManagers.Components;
+using Intrepion.EmployeeManagers.Components.Account;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -110,7 +110,7 @@ app.UseAntiforgery();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
     .AddInteractiveWebAssemblyRenderMode()
-    .AddAdditionalAssemblies(typeof(ApplicationNamePlaceholder.Client._Imports).Assembly);
+    .AddAdditionalAssemblies(typeof(Intrepion.EmployeeManagers.Client._Imports).Assembly);
 
 app.MapAdditionalIdentityEndpoints();
 
