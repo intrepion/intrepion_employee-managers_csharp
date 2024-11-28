@@ -1,4 +1,4 @@
-using Microsoft.JSInterop;
+﻿using Microsoft.JSInterop;
 
 namespace Intrepion.EmployeeManagers.Shared;
 
@@ -15,7 +15,7 @@ public class ExampleJsInterop : IAsyncDisposable
 
     public ExampleJsInterop(IJSRuntime jsRuntime)
     {
-        moduleTask = new (() => jsRuntime.InvokeAsync<IJSObjectReference>(
+        moduleTask = new(() => jsRuntime.InvokeAsync<IJSObjectReference>(
             "import", "./_content/Intrepion.EmployeeManagers.Shared/exampleJsInterop.js").AsTask());
     }
 
