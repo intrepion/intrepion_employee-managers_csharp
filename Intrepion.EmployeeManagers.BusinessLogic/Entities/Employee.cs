@@ -10,5 +10,6 @@ public class Employee
     public DateTime UpdateDateTime { get; set; }
 
     public ApplicationUser? ApplicationUser { get; set; }
+    public ICollection<EmployeeManager> EmployeeManagers { get; set; } = [];
     // ActualPropertyPlaceholder
 }
