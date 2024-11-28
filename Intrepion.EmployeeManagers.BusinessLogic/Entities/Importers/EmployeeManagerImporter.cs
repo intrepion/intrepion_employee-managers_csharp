@@ -52,6 +52,7 @@ public static class EmployeeManagerImporter
             var employee = employeeList.FirstOrDefault(x =>
                 true
                 && x.NormalizedFirstName.Equals(record.Employee_NormalizedFirstName)
+                && x.NormalizedLastName.Equals(record.Employee_NormalizedLastName)
             // ManyToOneCodePlaceholder
 
             if (true
