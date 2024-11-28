@@ -29,6 +29,7 @@ public partial class EmployeeAdminPages : PageTest
         await Expect(Page).ToHaveTitleAsync("Employee Edit");
 
         await Page.GetByLabel("First Name:", new() { Exact = true }).FillAsync("someFirstName" + someRandomString);
+        await Page.GetByLabel("Is Test?:", new() { Exact = true }).CheckAsync();
         // ModifyPropertyCodePlaceholder
 
         await Page.GetByRole(AriaRole.Button, new() { Name = "Submit" }).ClickAsync();
