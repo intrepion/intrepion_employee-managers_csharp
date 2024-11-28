@@ -99,6 +99,7 @@ public static class EmployeeManagerImporter
                     dbEmployeeManager.ApplicationUserUpdatedBy = applicationUserUpdatedBy;
 
                     dbEmployeeManager.Employee = employee;
+                    dbEmployeeManager.Manager = manager;
                     // ExistingEntityCodePlaceholder
                 }
             }
