@@ -1,9 +1,9 @@
 using System.Diagnostics;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using ApplicationNamePlaceholder.BusinessLogic.Entities;
+using Intrepion.EmployeeManagers.BusinessLogic.Entities;
 
-namespace ApplicationNamePlaceholder.BusinessLogic.Grid.Admin.ApplicationUserGrid;
+namespace Intrepion.EmployeeManagers.BusinessLogic.Grid.Admin.ApplicationUserGrid;
 
 public class ApplicationUserGridQueryAdapter
 {
