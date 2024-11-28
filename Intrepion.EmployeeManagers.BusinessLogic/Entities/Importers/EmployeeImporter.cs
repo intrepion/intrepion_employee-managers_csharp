@@ -64,6 +64,7 @@ public static class EmployeeImporter
                 var dbEmployee = await context.Employees.SingleOrDefaultAsync(
                     x => true
                     && x.NormalizedFirstName.Equals(employee.NormalizedFirstName)
+                    && x.NormalizedLastName.Equals(employee.NormalizedLastName)
                     // CompositeKeyCodePlaceholder
                 );
 
