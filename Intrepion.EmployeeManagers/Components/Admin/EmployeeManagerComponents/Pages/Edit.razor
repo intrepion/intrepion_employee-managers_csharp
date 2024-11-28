@@ -1,4 +1,4 @@
-@page "/admin/UrlNamePlaceholder/edit/{EmployeeManagerId:guid}"
+@page "/admin/employee-manager/edit/{EmployeeManagerId:guid}"
 @rendermode InteractiveServer
 @implements IDisposable
 @inject IDbContextFactory<ApplicationDbContext> DbFactory
@@ -106,7 +106,7 @@ else
             }
 
             EditSuccessState.Success = true;
-            Navigation.NavigateTo($"/admin/UrlNamePlaceholder/view/{EmployeeManager.Id}");
+            Navigation.NavigateTo($"/admin/employee-manager/view/{EmployeeManager.Id}");
         }
         catch (DbUpdateConcurrencyException dbex)
         {
@@ -118,7 +118,7 @@ else
 
             if (dbValues is null)
             {
-                Navigation.NavigateTo($"/admin/UrlNamePlaceholder/view/{EmployeeManager.Id}");
+                Navigation.NavigateTo($"/admin/employee-manager/view/{EmployeeManager.Id}");
                 return;
             }
 
@@ -140,7 +140,7 @@ else
     private void Cancel()
     {
         Busy = true;
-        Navigation.NavigateTo($"/admin/UrlNamePlaceholder/{PageHelper.Page}");
+        Navigation.NavigateTo($"/admin/employee-manager/{PageHelper.Page}");
     }
 
     public void Dispose() => Context?.Dispose();
