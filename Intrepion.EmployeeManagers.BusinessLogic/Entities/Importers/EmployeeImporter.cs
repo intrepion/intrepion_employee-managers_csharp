@@ -80,6 +80,7 @@ public static class EmployeeImporter
                     dbEmployee.ApplicationUserUpdatedBy = applicationUserUpdatedBy;
 
                     dbEmployee.FirstName = record.FirstName;
+                    dbEmployee.IsTest = record.IsTest;
                     // ExistingEntityCodePlaceholder
                 }
             }
