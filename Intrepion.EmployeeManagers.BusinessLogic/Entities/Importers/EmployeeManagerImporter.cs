@@ -51,6 +51,7 @@ public static class EmployeeManagerImporter
             // ManyToOneCodePlaceholder
 
             if (true
+                && employee is not null
                 // NullCheckCodePlaceholder
             )
             {
