@@ -1,4 +1,4 @@
-﻿namespace ApplicationNamePlaceholder.BusinessLogic.Grid.Admin.ApplicationUserGrid;
+﻿namespace Intrepion.EmployeeManagers.BusinessLogic.Grid.Admin.ApplicationUserGrid;
 
 public interface IApplicationUserFilters
 {
