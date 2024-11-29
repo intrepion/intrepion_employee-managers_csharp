@@ -1,0 +1,147 @@
+@page "/admin/employee/edit/{EmployeeId:guid}"
+@rendermode InteractiveServer
+@implements IDisposable
+@inject IDbContextFactory<ApplicationDbContext> DbFactory
+@inject NavigationManager Navigation
+@inject IPageHelper PageHelper
+@inject EditSuccess EditSuccessState
+
+<PageTitle>Employee Edit</PageTitle>
+
+@if (Employee is null && !Busy)
+{
+    <p>Could not find Employee with id @EmployeeId.</p>
+}
+else
+{
+    <EmployeeForm Busy="Busy" 
+                 Employee="Employee" 
+                 DbEmployee="DbEmployee" 
+                 IsAdd="false" 
+                 CancelRequest="Cancel" 
+                 ValidationResult="@(async (success) => await ValidationResultAsync(success))" />
+}
+
+@if (ConcurrencyError)
+{
+    <br />
+    <div class="alert alert-danger">
+        <p>
+            The Employee details have changed since it was last loaded. The updated fields are highlighted in the form.
+            Please choose an option:
+        </p>
+        <p><b>Cancel</b> to lose your changes and keep the database version.</p>
+        <p><b>Submit</b> to force an update with your version.</p>
+    </div>
+}
+
+@if (Error)
+{
+    <br />
+    <div class="alert alert-danger">Failed to update the Employee (@ErrorMessage).</div>
+}
+
+@code {
+    [Parameter]
+    public Guid EmployeeId { get; set; }
+
+    private ApplicationDbContext? Context { get; set; }
+
+    private Employee Employee { get; set; } = new Employee();
+
+    private Employee DbEmployee { get; set; } = new Employee();
+
+    private bool Busy;
+
+    private bool Error;
+
+    private bool ConcurrencyError;
+
+    private string ErrorMessage = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Busy = true;
+
+        try
+        {
+            Context = DbFactory.CreateDbContext();
+
+            if (Context is not null && Context.Employees is not null)
+            {
+                var employee = await Context.Employees.SingleOrDefaultAsync(x => x.Id == EmployeeId);
+
+                if (employee is not null)
+                {
+                    Employee = employee;
+                }
+            }
+        }
+        finally
+        {
+            Busy = false;
+        }
+    }
+
+    private async Task ValidationResultAsync(bool success)
+    {
+        if (Busy)
+        {
+            return;
+        }
+
+        if (!success)
+        {
+            Error = false;
+            ConcurrencyError = false;
+            return;
+        }
+
+        Busy = true;
+        try
+        {
+            if (Context is not null)
+            {
+                await Context.SaveChangesAsync();
+            }
+
+            EditSuccessState.Success = true;
+            Navigation.NavigateTo($"/admin/employee/view/{Employee.Id}");
+        }
+        catch (DbUpdateConcurrencyException dbex)
+        {
+            EditSuccessState.Success = false;
+
+            ConcurrencyError = true;
+
+            var dbValues = dbex.Entries[0].GetDatabaseValues();
+
+            if (dbValues is null)
+            {
+                Navigation.NavigateTo($"/admin/employee/view/{Employee.Id}");
+                return;
+            }
+
+            DbEmployee = (Employee)dbValues.ToObject();
+
+            dbex.Entries[0].OriginalValues.SetValues(dbValues);
+            Error = false;
+            Busy = false;
+        }
+        catch (Exception ex)
+        {
+            EditSuccessState.Success = false;
+            Error = true;
+            ErrorMessage = ex.Message;
+            Busy = false;
+        }
+    }
+
+    private void Cancel()
+    {
+        Busy = true;
+        Navigation.NavigateTo($"/admin/employee/{PageHelper.Page}");
+    }
+
+    public void Dispose() => Context?.Dispose();
+}
