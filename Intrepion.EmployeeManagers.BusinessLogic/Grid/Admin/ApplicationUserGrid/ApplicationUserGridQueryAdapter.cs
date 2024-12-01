@@ -1,7 +1,7 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Linq.Expressions;
-using Microsoft.EntityFrameworkCore;
 using Intrepion.EmployeeManagers.BusinessLogic.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Intrepion.EmployeeManagers.BusinessLogic.Grid.Admin.ApplicationUserGrid;
 

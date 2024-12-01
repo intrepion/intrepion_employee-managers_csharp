@@ -1,4 +1,4 @@
-namespace Intrepion.EmployeeManagers.BusinessLogic.Grid.Admin.EmployeeManagerGrid;
+﻿namespace Intrepion.EmployeeManagers.BusinessLogic.Grid.Admin.EmployeeManagerGrid;
 
 public class EmployeeManagerGridControls(IPageHelper pageHelper) : IEmployeeManagerFilters
 {
