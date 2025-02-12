@@ -1,0 +1,86 @@
+@page "/admin/employee-manager/add"
+@rendermode InteractiveServer
+@inject IDbContextFactory<ApplicationDbContext> DbFactory
+@inject NavigationManager Navigation
+
+<PageTitle>Employee Manager Add</PageTitle>
+
+@if (EmployeeManager is not null)
+{
+  <EmployeeManagerForm Busy="Busy" 
+         EmployeeManager="EmployeeManager" 
+         IsAdd="true"
+         CancelRequest="Cancel"
+         ValidationResult="@(async (success) => await ValidationResultAsync(success))" />
+}
+
+@if (Success)
+{
+  <br />
+  <div class="alert alert-success">The Employee Manager was successfully added.</div>
+}
+
+@if (Error)
+{
+  <br />
+  <div class="alert alert-danger">Failed to add the Employee Manager (@ErrorMessage).</div>
+}
+
+@code {
+  private EmployeeManager? EmployeeManager { get; set; }
+
+  private bool Busy;
+
+  private bool Success;
+
+  private bool Error;
+
+  private string ErrorMessage = string.Empty;
+
+  protected override void OnInitialized()
+  {
+    EmployeeManager = new();
+  }
+
+  private async Task ValidationResultAsync(bool success)
+  {
+    if (Busy)
+    {
+      return;
+    }
+
+    if (!success)
+    {
+      Success = false;
+      Error = false;
+      return;
+    }
+
+    Busy = true;
+
+    using var context = DbFactory.CreateDbContext();
+
+    if (EmployeeManager is not null)
+    {
+      context.EmployeeManagers?.Add(EmployeeManager);
+    }
+
+    try
+    {
+      await context.SaveChangesAsync();
+      Success = true;
+      Error = false;
+
+      Navigation.NavigateTo($"/admin/employee-manager/view/{EmployeeManager?.Id}");
+    }
+    catch (Exception ex)
+    {
+      Success = false;
+      Error = true;
+      ErrorMessage = ex.Message;
+      Busy = false;
+    }
+  }
+
+  private void Cancel() => Navigation.NavigateTo($"/admin/employee-manager");
+}

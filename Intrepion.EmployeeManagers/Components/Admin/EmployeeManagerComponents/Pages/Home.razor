@@ -1,0 +1,70 @@
+@page "/admin/employee-manager"
+@rendermode InteractiveServer
+@inject IDbContextFactory<ApplicationDbContext> DbFactory
+@inject NavigationManager Navigation
+
+<PageTitle>Employee Manager Home</PageTitle>
+
+<h1>Employee Manager Home</h1>
+<h6><a href="/admin/employee-manager/add">Create New</a></h6>
+
+<div class="container-fluid">
+  <table class="table table-hover table-primary table-striped">
+    <thead>
+      <tr>
+        <th>Actions</th>
+        <th>Employee</th>
+        <th>Manager</th>
+        @* TableHeaderCodePlaceholder *@
+      </tr>
+    </thead>
+    <tbody>
+      @if (employeeManagers is not null)
+      {
+        @foreach (var employeeManager in employeeManagers)
+        {
+          <tr>
+            <td>
+              <div class="btn-group">
+                <a class="btn btn-primary btn-sm btn-info" href="/admin/employee-manager/view/@employeeManager.Id" title="View">
+                  <i class="bi bi-eye"></i>
+                </a>
+                <a class="btn btn-primary btn-sm" href="/admin/employee-manager/edit/@employeeManager.Id" title="Edit">
+                  <i class="bi bi-pencil"></i>
+                </a>
+              </div>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            @* TableRowCodePlaceholder *@
+          </tr>
+        }
+      }
+    </tbody>
+  </table>
+</div>
+
+@code {
+  private ICollection<EmployeeManager>? employeeManagers { get; set; }
+
+  protected override async Task OnParametersSetAsync()
+  {
+    await ReloadAsync();
+  }
+
+  private async Task ReloadAsync()
+  {
+    employeeManagers = new List<EmployeeManager>();
+
+    using var context = DbFactory.CreateDbContext();
+    var query = context.EmployeeManagers?.AsQueryable();
+
+    if (query is not null)
+    {
+      employeeManagers = await query.AsNoTracking().ToListAsync();
+    }
+  }
+}
+
