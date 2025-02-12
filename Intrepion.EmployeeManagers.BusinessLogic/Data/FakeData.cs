@@ -1,5 +1,5 @@
-﻿using Intrepion.EmployeeManagers.BusinessLogic.Entities;
-using Bogus;
+﻿using Bogus;
+using Intrepion.EmployeeManagers.BusinessLogic.Entities;
 
 namespace Intrepion.EmployeeManagers.BusinessLogic.Data;
 
