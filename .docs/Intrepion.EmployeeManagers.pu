@@ -1,0 +1,35 @@
+@startuml
+
+entity Employee {
+    Id : Guid
+    --
+    ApplicationUser : ApplicationUser
+    EmployeeManagers : ICollection<EmployeeManager>
+    ManagerEmployees : ICollection<EmployeeManager>
+    ' EmployeeKeyCodePlaceholder
+    --
+    FirstName : string
+    IsTest : bool
+    IsVerified : bool
+    LastName : string
+    ' EmployeePropertyCodePlaceholder
+}
+
+entity EmployeeManager {
+    Id : Guid
+    --
+    Employee : Employee
+    Manager : Employee
+    ' EmployeeManagerKeyCodePlaceholder
+    --
+    ' EmployeeManagerPropertyCodePlaceholder
+}
+
+' EntityCodePlaceholder
+
+Employee |o--o| ApplicationUser
+EmployeeManager }o--o| Employee
+EmployeeManager }o--o| Employee
+' RelationshipCodePlaceholder
+
+@enduml
