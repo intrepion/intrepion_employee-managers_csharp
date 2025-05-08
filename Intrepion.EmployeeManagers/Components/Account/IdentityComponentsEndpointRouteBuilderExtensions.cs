@@ -1,14 +1,14 @@
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using System.Text.Json;
+using Intrepion.EmployeeManagers.BusinessLogic.Entities;
+using Intrepion.EmployeeManagers.Components.Account.Pages;
+using Intrepion.EmployeeManagers.Components.Account.Pages.Manage;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Primitives;
-using Intrepion.EmployeeManagers.Components.Account.Pages;
-using Intrepion.EmployeeManagers.Components.Account.Pages.Manage;
-using Intrepion.EmployeeManagers.Data;
 
 namespace Microsoft.AspNetCore.Routing;
 

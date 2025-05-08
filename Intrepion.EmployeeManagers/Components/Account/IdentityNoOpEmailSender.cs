@@ -1,6 +1,6 @@
+﻿using Intrepion.EmployeeManagers.BusinessLogic.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
-using Intrepion.EmployeeManagers.Data;
 
 namespace Intrepion.EmployeeManagers.Components.Account;
 
